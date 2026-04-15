@@ -1,0 +1,339 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.controls {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    color: #555;
+    font-weight: bold;
+}
+
+.controls input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 80px;
+    text-align: center;
+}
+
+.controls button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #357abd;
+}
+
+/* Style for the "End Tournament" button */
+#end-tournament-btn {
+    background-color: #e94e77; /* A distinct color for ending */
+}
+#end-tournament-btn:hover {
+    background-color: #d33e5f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background-color: #f9f9f9;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #333;
+    font-size: 0.95rem;
+}
+
+td input[type="text"],
+td input[type="number"] {
+    width: calc(100% - 24px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+td input[type="text"]:focus,
+td input[type="number"]:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.total-score {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #eef7ff;
+    border-left: 5px solid #4a90e2;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.total-score span {
+    color: #4a90e2;
+}
+
+/* Color coding for rating differences */
+.rating-diff-plus-2 { background-color: #d4edda; } /* Light Green */
+.rating-diff-plus-1 { background-color: #fff3cd; } /* Light Yellow */
+.rating-diff-0     { background-color: #cfe2ff; } /* Light Blue */
+.rating-diff-minus-1 { background-color: #f8d7da; } /* Light Red */
+.rating-diff-minus-2 { background-color: #e2e3e5; } /* Light Gray */
+
+/* Highlighting for top 3 players with borders */
+.top-3-player-border-1 { border: 3px solid #FFD700 !important; } /* Gold border */
+.top-3-player-border-2 { border: 3px solid #C0C0C0 !important; } /* Silver border */
+.top-3-player-border-3 { border: 3px solid #cd7f32 !important; } /* Bronze border */
+
+/* Highlighting for player with the least goals */
+.least-goals-border {
+    border: 3px solid #dc3545 !important; /* Red border */
+}
+
+/* Legend section */
+.legend {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.legend-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legend-group-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+/* Specific color for legend item that represents a border */
+.legend-color.border-legend-item {
+    background-color: transparent;
+    border-width: 3px;
+}
+
+/* Simple Pedestal section styles */
+.pedestal-container {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pedestal-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.pedestal-simple {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px; /* Reduced gap for simplicity */
+    width: 100%;
+}
+
+.pedestal-step-simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1; /* Each step takes equal space */
+    max-width: 120px; /* Max width for each step */
+}
+
+.pedestal-step-simple:nth-child(1) { /* 1st place */
+    order: 2; /* Middle position */
+    height: 150px;
+    background-color: #FFD700; /* Gold */
+    border-radius: 8px 8px 0 0;
+    margin-bottom: -30px; /* Push down to align base */
+}
+
+.pedestal-step-simple:nth-child(2) { /* 2nd place */
+    order: 1; /* Left position */
+    height: 120px;
+    background-color: #C0C0C0; /* Silver */
+    border-radius: 8px 8px 0 0;
+    margin-bottom: -60px; /* Push down to align base */
+}
+
+.pedestal-step-simple:nth-child(3) { /* 3rd place */
+    order: 3; /* Right position */
+    height: 100px;
+    background-color: #cd7f32; /* Bronze */
+    border-radius: 8px 8px 0 0;
+    margin-bottom: -90px; /* Push down to align base */
+}
+
+.player-rank-simple {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px; /* Space from top of step */
+}
+
+.player-name-simple {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+    word-wrap: break-word;
+    line-height: 1.2; /* Adjust line height for better text flow */
+}
+
+.player-goals-simple {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+#continue-tournament-btn {
+    background-color: #28a745; /* Green color for continue */
+    margin-top: 20px;
+}
+#continue-tournament-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .controls input[type="number"] {
+        width: auto;
+    }
+    .controls button {
+        width: 100%;
+    }
+    th, td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .total-score {
+        font-size: 1rem;
+    }
+    .legend {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .legend-group {
+        width: 100%;
+    }
+    .pedestal-simple {
+        flex-direction: row; /* Keep row layout on mobile */
+        justify-content: center;
+        align-items: flex-end; /* Align to bottom */
+        gap: 10px;
+        height: auto; /* Adjust height dynamically */
+    }
+    .pedestal-step-simple {
+        height: auto !important; /* Allow height to adapt */
+        margin-bottom: 10px !important; /* Space below steps */
+        max-width: 100px; /* Adjust max width for steps */
+        flex: 0 1 auto; /* Allow steps to shrink/grow but not exceed max-width */
+    }
+    .pedestal-step-simple:nth-child(1) { order: 2; margin-bottom: 10px !important; }
+    .pedestal-step-simple:nth-child(2) { order: 1; margin-bottom: 10px !important; }
+    .pedestal-step-simple:nth-child(3) { order: 3; margin-bottom: 10px !important; }
+
+    .player-rank-simple { font-size: 1rem; margin-top: 5px; }
+    .player-name-simple { font-size: 0.9rem; }
+    .player-goals-simple { font-size: 0.8rem; margin-top: 2px; }
+}
